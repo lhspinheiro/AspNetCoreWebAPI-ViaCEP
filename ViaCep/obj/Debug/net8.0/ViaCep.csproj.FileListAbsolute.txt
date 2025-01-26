@@ -40,3 +40,4 @@
 /media/lhspinheiro/HD/Projetos/C# projects/ViaCep/ViaCep/obj/Debug/net8.0/ViaCep.pdb
 /media/lhspinheiro/HD/Projetos/C# projects/ViaCep/ViaCep/obj/Debug/net8.0/ViaCep.genruntimeconfig.cache
 /media/lhspinheiro/HD/Projetos/C# projects/ViaCep/ViaCep/obj/Debug/net8.0/ref/ViaCep.dll
+/media/lhspinheiro/HD/Projetos/C# projects/ViaCep/ViaCep/obj/Debug/net8.0/ViaCep.sourcelink.json
