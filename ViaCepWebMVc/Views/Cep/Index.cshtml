@@ -4,34 +4,44 @@
     ViewData["Title"] = "Página Inicial";
 }
 
-<h2>Buscar CEP</h2>
+
+<div class="main-section">
+    <h2 class="title-color">Buscar CEP</h2>
+    <br/>
+
+    <form method="post" action="/Cep/BuscarCep">
+        <input type="text" name="cep" placeholder="Digite o CEP" required />
+        <button type="submit">Buscar</button>
+    </form>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color: red;">@ViewBag.Error</p>
+    }
+
+    @if (Model != null)
+    {
+        <div style="margin-top: 20px;">
+            <h3 class="title-color">Dados do Endereço:</h3>
+            <br/>
+            <p><strong>CEP:</strong> @Model.Cep</p>
+            <p><strong>Logradouro:</strong> @Model.Logradouro</p>
+            <p><strong>Complemento:</strong> @Model.Complemento</p>
+            <p><strong>Unidade: </strong> @Model.Unidade</p>
+            <p><strong>Bairro: </strong> @Model.Bairro</p>
+            <p><strong>Localidade: </strong> @Model.Localidade</p>
+            <p><strong>Uf: </strong> @Model.Uf</p>
+            <p><strong>Estado: </strong> @Model.Estado</p>
+            <p><strong>Região: </strong> @Model.Regiao</p>
+            <p><strong>Ibge: </strong> @Model.Ibge</p>
+            <p><strong>Gia: </strong> @Model.Gia</p>
+            <p><strong>Ddd: </strong> @Model.Ddd</p>
+            <p><strong>Siafi: </strong> @Model.Siafi</p>
+        </div>
+    }
+</div>
 
 <form method="post" action="/Cep/BuscarCep">
     <input type="text" name="cep" placeholder="Digite o CEP" required />
     <button type="submit">Buscar</button>
 </form>
-
-@if (ViewBag.Error != null)
-{
-    <p style="color: red;">@ViewBag.Error</p>
-}
-
-@if (Model != null)
-{
-    <div style="margin-top: 20px;">
-        <h3>Dados do CEP:</h3>
-        <p><strong>CEP:</strong> @Model.Cep</p>
-        <p><strong>Logradouro:</strong> @Model.Logradouro</p>
-        <p><strong>Complemento:</strong> @Model.Complemento</p>
-        <p><strong>Unidade: </strong> @Model.Unidade</p>
-        <p><strong>Bairro: </strong> @Model.Bairro</p>
-        <p><strong>Localidade: </strong> @Model.Localidade</p>
-        <p><strong>Uf: </strong> @Model.Uf</p>
-        <p><strong>Estado: </strong> @Model.Estado</p>
-        <p><strong>Região: </strong> @Model.Regiao</p>
-        <p><strong>Ibge: </strong> @Model.Ibge</p>
-        <p><strong>Gia: </strong> @Model.Gia</p>
-        <p><strong>Ddd: </strong> @Model.Ddd</p>
-        <p><strong>Siafi: </strong> @Model.Siafi</p>
-    </div>
-}

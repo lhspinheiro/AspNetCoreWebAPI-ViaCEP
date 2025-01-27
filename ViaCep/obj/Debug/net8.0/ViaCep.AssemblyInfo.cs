@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ViaCep")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+197690519f910795295c335db00ac14d6e820e4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b205484de00f1b51b680d448b7fa3fcbfaf4ab7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ViaCep")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ViaCep")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
