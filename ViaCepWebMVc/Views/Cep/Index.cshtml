@@ -19,29 +19,61 @@
         <p style="color: red;">@ViewBag.Error</p>
     }
 
-    @if (Model != null)
+    @if (ViewBag.Cep != null)
     {
         <div style="margin-top: 20px;">
             <h3 class="title-color">Dados do Endereço:</h3>
             <br/>
-            <p><strong>CEP:</strong> @Model.Cep</p>
-            <p><strong>Logradouro:</strong> @Model.Logradouro</p>
-            <p><strong>Complemento:</strong> @Model.Complemento</p>
-            <p><strong>Unidade: </strong> @Model.Unidade</p>
-            <p><strong>Bairro: </strong> @Model.Bairro</p>
-            <p><strong>Localidade: </strong> @Model.Localidade</p>
-            <p><strong>Uf: </strong> @Model.Uf</p>
-            <p><strong>Estado: </strong> @Model.Estado</p>
-            <p><strong>Região: </strong> @Model.Regiao</p>
-            <p><strong>Ibge: </strong> @Model.Ibge</p>
-            <p><strong>Gia: </strong> @Model.Gia</p>
-            <p><strong>Ddd: </strong> @Model.Ddd</p>
-            <p><strong>Siafi: </strong> @Model.Siafi</p>
+            <p><strong>CEP:</strong> @ViewBag.Cep.Cep</p>
+            <p><strong>Logradouro:</strong> @ViewBag.Cep.Logradouro</p>
+            <p><strong>Complemento:</strong> @ViewBag.Cep.Complemento</p>
+            <p><strong>Unidade: </strong> @ViewBag.Cep.Unidade</p>
+            <p><strong>Bairro: </strong> @ViewBag.Cep.Bairro</p>
+            <p><strong>Localidade: </strong> @ViewBag.Cep.Localidade</p>
+            <p><strong>Uf: </strong> @ViewBag.Cep.Uf</p>
+            <p><strong>Estado: </strong> @ViewBag.Cep.Estado</p>
+            <p><strong>Região: </strong> @ViewBag.Cep.Regiao</p>
+            <p><strong>Ibge: </strong> @ViewBag.Cep.Ibge</p>
+            <p><strong>Gia: </strong> @ViewBag.Cep.Gia</p>
+            <p><strong>Ddd: </strong> @ViewBag.Cep.Ddd</p>
+            <p><strong>Siafi: </strong> @ViewBag.Cep.Siafi</p>
         </div>
     }
+    
+    <br>
+
+    <form method="post" action="/Cep/ObterCep">
+        <input type="text" name="sigla" placeholder="Digite a sigla da cidade ou estado " required />
+        <input type="text" name="cidade" placeholder="Digite a cidade ou estado " required />
+        <input type="text" name="endereco" placeholder="Digite a rua " required />
+        <button type="submit">Buscar</button>
+    </form>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color: red;">@ViewBag.Error</p>
+    }
+
+    @if (ViewBag.Endereco != null)
+    {
+        <div style="margin-top: 20px;">
+            <h3 class="title-color">Dados do Endereço:</h3>
+            <br/>
+            <p><strong>CEP:</strong> @ViewBag.Endereco.Cep</p>
+            <p><strong>Logradouro:</strong> @ViewBag.Endereco.Logradouro</p>
+            <p><strong>Complemento:</strong> @ViewBag.Endereco.Complemento</p>
+            <p><strong>Unidade: </strong> @ViewBag.Endereco.Unidade</p>
+            <p><strong>Bairro: </strong> @ViewBag.Endereco.Bairro</p>
+            <p><strong>Localidade: </strong> @ViewBag.Endereco.Localidade</p>
+            <p><strong>Uf: </strong> @ViewBag.Endereco.Uf</p>
+            <p><strong>Estado: </strong> @ViewBag.Endereco.Estado</p>
+            <p><strong>Região: </strong> @ViewBag.Endereco.Regiao</p>
+            <p><strong>Ibge: </strong> @ViewBag.Endereco.Ibge</p>
+            <p><strong>Gia: </strong> @ViewBag.Endereco.Gia</p>
+            <p><strong>Ddd: </strong> @ViewBag.Endereco.Ddd</p>
+            <p><strong>Siafi: </strong> @ViewBag.Endereco.Siafi</p>
+        </div>
+    }
+    
 </div>
 
-<form method="post" action="/Cep/BuscarCep">
-    <input type="text" name="cep" placeholder="Digite o CEP" required />
-    <button type="submit">Buscar</button>
-</form>
